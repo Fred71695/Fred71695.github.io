@@ -1,0 +1,76 @@
+---
+output:
+  govdown::govdown_document:
+    font: "sans-serif" # (default) or "new-transport"
+    logo_url: "https://ukgovdatascience.github.io/govdown/"
+    logo_text: "GOV.UK"
+    page_title: "My Covid Dashboard"
+    title: "My Covid Dashboard"
+    phase: alpha
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+library("tidyverse")
+
+c19 <- read.csv("https://api.coronavirus.data.gov.uk/v2/data?areaType=nhsRegion&metric=cumAdmissionsByAge&format=csv")
+
+# Get ages in the data
+ages <- sort(unique(c19$age))
+
+# Update the data
+c19 <- c19 |> 
+  mutate(date = as.Date(date),
+         age = ordered(age, levels = ages[c(1,3,2,4,5)]))
+```
+
+## Latest Covid-19 regional rate data
+
+This report is based on UK Government data available at <https://coronavirus.data.gov.uk/details/download>
+
+The current cumulative hospital admission rate in regions of the UK broken down by age band can be seen in the following graphic:
+
+```{r,echo=FALSE}
+ggplot(c19, aes(x = date, y = rate, colour = areaName)) +
+  facet_wrap(~ age, scales = "free") +
+  geom_line()
+```
+
+The aggregate rate across all age groups by region is as follows:
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+c19.regions <- c19 |> 
+  mutate(total = value*100000/rate) |> 
+  group_by(date, areaName) |> 
+  summarise(totalrate = sum(value)/sum(total)*100000)
+
+ggplot(c19.regions, aes(x = date, y = totalrate, colour = areaName)) +
+  geom_line()
+```
+
+The most recent rate data for the last 7 days of available data in the North East & Yorkshire, at the time of writing, is:
+
+```{r,echo=FALSE}
+# This gets the unique dates, sorting them most recent to oldest
+all_dates <- sort(unique(c19$date), decreasing = TRUE)
+# Then, the date 7 days ago will be in all_dates[7]
+
+# First subset:
+recent_rates_ne <- c19 |> 
+  filter(areaName == "North East and Yorkshire",
+         date >= all_dates[7])
+
+# Then pivot
+recent_rates_ne_wide <- pivot_wider(recent_rates_ne |> select(date, age, rate),
+                                    names_from = "age",
+                                    values_from = "rate",
+                                    names_sort = TRUE)
+
+# Print table
+knitr::kable(recent_rates_ne_wide)
+```
+
+End of report!

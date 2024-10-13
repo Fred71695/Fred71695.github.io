@@ -562,3 +562,168 @@ article .icon {
     margin-top:250px;
 }
 
+
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    #experience {
+        padding: 20px 10px;  /* Reduce padding on mobile */
+    }
+
+    #experience h1 {
+        font-size: 2rem;  /* Smaller heading size */
+    }
+
+    .experience-details-container {
+        display: flex;
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;  /* Center align for better visuals */
+    }
+
+    .details-container {
+        width: 100%;  /* Full width on mobile */
+        margin-bottom: 20px;  /* Add spacing between items */
+        padding: 15px;  /* Reduce padding for smaller screens */
+    }
+
+    .details-container h2 {
+        font-size: 1.5rem;  /* Smaller subtitle size */
+        margin-bottom: 15px;  /* Less space below the subtitle */
+    }
+
+    .article-container {
+        flex-direction: column;  /* Stack articles vertically */
+        align-items: flex-start;  /* Align items to the left */
+    }
+
+    article {
+        width: 100%;  /* Make each article take full width */
+        padding: 10px;  /* Less padding for articles */
+    }
+
+    article h3 {
+        font-size: 1rem;  /* Smaller skill name size */
+    }
+
+    article p {
+        font-size: 0.8rem;  /* Smaller text size */
+    }
+
+    .icon.arrow {
+        width: 40px;  /* Smaller arrow icon */
+        height: 40px;  /* Smaller arrow icon */
+        margin-top: 20px;  /* Spacing above the arrow */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #experience {
+        padding: 15px 5px;  /* Further reduce padding */
+    }
+
+    #experience h1 {
+        font-size: 1.75rem;  /* Even smaller heading size for small screens */
+    }
+
+    .details-container h2 {
+        font-size: 1.3rem;  /* Smaller subtitle size */
+    }
+
+    article h3 {
+        font-size: 0.9rem;  /* Further reduce skill name size */
+    }
+
+    article p {
+        font-size: 0.7rem;  /* Further reduce text size */
+    }
+
+    .icon.arrow {
+        width: 35px;  /* Smaller arrow icon */
+        height: 35px;  /* Smaller arrow icon */
+    }
+}
+
+
+
+
+/* Media Queries for Mobile Devices in the Projects Section */
+@media only screen and (max-width: 768px) {
+    #projects {
+        padding: 20px 10px;  /* Reduce padding for mobile */
+    }
+
+    #projects h1 {
+        font-size: 2rem;  /* Smaller heading size */
+        text-align: center;  /* Center-align heading */
+    }
+
+    .experience-details-container {
+        display: flex;
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;  /* Center align for better visuals */
+    }
+
+    .details-container {
+        width: 100%;  /* Full width on mobile */
+        margin-bottom: 20px;  /* Add spacing between items */
+        padding: 15px;  /* Less padding for containers */
+        text-align: center;  /* Center align text within containers */
+    }
+
+    .project-img {
+        width: 100%;  /* Make images responsive */
+        height: auto;  /* Maintain aspect ratio */
+        border-radius: 8px;  /* Rounded corners for images */
+    }
+
+    .project-title {
+        font-size: 1.5rem;  /* Smaller project title size */
+        margin: 15px 0;  /* Margin above and below the title */
+    }
+
+    .btn-container {
+        flex-direction: column;  /* Stack buttons vertically */
+        gap: 10px;  /* Space between buttons */
+    }
+
+    .project-btn {
+        font-size: 1rem;  /* Smaller button text size */
+        padding: 10px 15px;  /* Adjust padding for buttons */
+        width: 100%;  /* Full width for buttons */
+    }
+
+    .icon.arrow {
+        width: 40px;  /* Smaller arrow icon */
+        height: 40px;  /* Smaller arrow icon */
+        margin-top: 20px;  /* Spacing above the arrow */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #projects {
+        padding: 15px 5px;  /* Further reduce padding */
+    }
+
+    #projects h1 {
+        font-size: 1.75rem;  /* Even smaller heading size for small screens */
+    }
+
+    .details-container {
+        padding: 10px;  /* Less padding for smaller screens */
+    }
+
+    .project-title {
+        font-size: 1.3rem;  /* Smaller project title size */
+    }
+
+    .project-btn {
+        font-size: 0.9rem;  /* Further reduce button text size */
+    }
+
+    .icon.arrow {
+        width: 35px;  /* Smaller arrow icon */
+        height: 35px;  /* Smaller arrow icon */
+    }
+}
+
+

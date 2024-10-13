@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <a href="index.html" class="home-button">Home</a> <!-- Home Button -->
+
+    <h1>Photo Gallery</h1>
+
+    <div class="intro-text">
+        <p>Here i will post my Astrophotography work in addition to any photos i collect whilst travelling. I hope you enjoy!</p>
+    </div>
+    
+    <div class="gallery">
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_4558.jpeg', 'Description of Image 1')">
+            <img src="./assets/gallery/IMG_4558.jpeg" alt="Image 1">
+            <p>Description of Image 1</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_4567.jpeg', 'Description of Image 2')">
+            <img src="./assets/gallery/IMG_4567.jpeg" alt="Image 2">
+            <p>Description of Image 2</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_4621.jpeg', 'Description of Image 3')">
+            <img src="./assets/gallery/IMG_4621.jpeg" alt="Image 3">
+            <p>Description of Image 3</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_4632.jpeg', 'Description of Image 4')">
+            <img src="./assets/gallery/IMG_4632.jpeg" alt="Image 4">
+            <p>Description of Image 4</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_5480.jpeg', 'Description of Image 5')">
+            <img src="./assets/gallery/IMG_5480.jpeg" alt="Image 5">
+            <p>Description of Image 5</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_5502.jpeg', 'Description of Image 6')">
+            <img src="./assets/gallery/IMG_5502.jpeg" alt="Image 6">
+            <p>Description of Image 6</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_5861.jpeg', 'Description of Image 7')">
+            <img src="./assets/gallery/IMG_5861.jpeg" alt="Image 7">
+            <p>Description of Image 7</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('image8.jpg', 'Description of Image 8')">
+            <img src="./assets/mountainimage.png" alt="Image 8">
+            <p>Description of Image 8</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('image9.jpg', 'Description of Image 9')">
+            <img src="./assets/mountainimage.png" alt="Image 9">
+            <p>Description of Image 9</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('image10.jpg', 'Description of Image 10')">
+            <img src="./assets/mountainimage.png" alt="Image 10">
+            <p>Description of Image 10</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('image11.jpg', 'Description of Image 11')">
+            <img src="./assets/mountainimage.png" alt="Image 11">
+            <p>Description of Image 11</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('image12.jpg', 'Description of Image 12')">
+            <img src="./assets/mountainimage.png" alt="Image 12">
+            <p>Description of Image 12</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 James Stuart. All rights reserved.</p>
+    </footer>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption" class="modal-caption"></div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
