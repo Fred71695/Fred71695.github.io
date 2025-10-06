@@ -47,24 +47,24 @@
             <img src="./assets/gallery/IMG_5861.jpeg" alt="Image 7">
             <p>Description of Image 7</p>
         </div>
-        <div class="gallery-item" onclick="openModal('image8.jpg', 'Description of Image 8')">
-            <img src="./assets/mountainimage.png" alt="Image 8">
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_0503.jpg', 'Description of Image 8')">
+            <img src="./assets/gallery/IMG_0503.jpg" alt="Image 8">
             <p>Description of Image 8</p>
         </div>
-        <div class="gallery-item" onclick="openModal('image9.jpg', 'Description of Image 9')">
-            <img src="./assets/mountainimage.png" alt="Image 9">
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_2308.jpg', 'Description of Image 9')">
+            <img src="./assets/gallery/IMG_2308.jpg" alt="Image 9">
             <p>Description of Image 9</p>
         </div>
-        <div class="gallery-item" onclick="openModal('image10.jpg', 'Description of Image 10')">
-            <img src="./assets/mountainimage.png" alt="Image 10">
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_1279.jpg, 'Description of Image 10')">
+            <img src="./assets/gallery/IMG_1279.jpg" alt="Image 10">
             <p>Description of Image 10</p>
         </div>
-        <div class="gallery-item" onclick="openModal('image11.jpg', 'Description of Image 11')">
-            <img src="./assets/mountainimage.png" alt="Image 11">
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_8305.jpg', 'Description of Image 11')">
+            <img src="./assets/gallery/IMG_8305.jpg" alt="Image 11">
             <p>Description of Image 11</p>
         </div>
-        <div class="gallery-item" onclick="openModal('image12.jpg', 'Description of Image 12')">
-            <img src="./assets/mountainimage.png" alt="Image 12">
+        <div class="gallery-item" onclick="openModal('./assets/gallery/IMG_0794.jpg', 'Description of Image 12')">
+            <img src="./assets/gallery/IMG_0794.jpg" alt="Image 12">
             <p>Description of Image 12</p>
         </div>
     </div>
@@ -73,12 +73,11 @@
         <p>&copy; 2024 James Stuart. All rights reserved.</p>
     </footer>
 
-    <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div id="modal-caption" class="modal-caption"></div>
-    </div>
-
+   <div id="modal" class="modal" style="display:none;" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="modal-caption" class="modal-caption"></div>
+</div>
     <script src="script2.js"></script>
 </body>
 </html>
